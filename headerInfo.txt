@@ -1,0 +1,45 @@
+Review the HTTP Headers in the Request and Response – create text file and describe
+each key value pair in the HTTP header in both request and response and check it in
+with the project to GitHub (e.g. what is the content-type and what does it mean)
+
+Alt-Svc →hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+The time identity and location of a Web resource which are usually shared, can be changed using the Alt-Svc header.
+
+Cache-Control →private, max-age=0, must-revalidate, no-transform
+This header is used to specify directives that must be followed by all caching mechanisms along the request/response chain.
+
+Content-Encoding →gzip
+Used to allow a document to be compressed without losing the identity of its underlying media type.
+
+Content-Type →application/json; charset=UTF-8
+Indicates the media type of the entity-body sent to the recipient.
+
+Date →Fri, 02 Feb 2018 20:59:01 GMT
+The date and the time when the message was initiated.
+
+ETag →"f6QLsd8inUgRKJVNBqJ8xHnPb0w/drp1qLdLPoCQBhL78ItdfQfQ9Aw"
+Provides the current value of the entity tag for the requested variant. A mechanism that HTTP provides for web cache validation.
+
+Expires →Fri, 02 Feb 2018 20:59:01 GMT
+The date and the time when the response is considered stale.
+
+Server →GSE
+Contains information about the software used by the origin server to handle the request.
+
+Transfer-Encoding →chunked
+Specifies the extension tranfer-encodings that is willing to be accepted in the response.
+
+Vary →Origin
+Specifies the set of request-header fields that determines, whether a cache is permitted to use the response to reply to a subsequent request without revalidation.
+
+Vary →X-Origin
+Specifies the set of request-header fields that determines, whether a cache is permitted to use the response to reply to a subsequent request without revalidation.
+
+X-Content-Type-Options →nosniff
+It is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing.
+
+X-Frame-Options →SAMEORIGIN
+Used to indicate  whether or not a browser should be allowed to render a page in a <frame>, <iframe> or <object> . Sites can use this to avoid clickjacking attacks.
+
+X-XSS-Protection →1; mode=block
+It is a feature of IE, Chrome, and Safari that stops pages from loading when they detect reflected cross-site scripting(XSS) attacks.
